@@ -30,5 +30,13 @@ public class Conta {
         this.saldo = saldo;
     }
     
+    public void sacar(int valor) {
+        this.saldo -= valor;
+    }
+    
+    public void depositar(int valor) {
+        this.saldo += valor;
+    }
+    
 
 }
