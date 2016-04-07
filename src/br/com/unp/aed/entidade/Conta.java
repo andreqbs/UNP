@@ -38,5 +38,8 @@ public class Conta {
         this.saldo += valor;
     }
     
+    public double saldo() {
+        return saldo;
+    }
 
 }
