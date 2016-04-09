@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.unp.aed.entidade;
+package aulaPOO;
 
 /**
  *
@@ -11,8 +11,8 @@ package br.com.unp.aed.entidade;
  */
 public class Pessoa {
 
-    String nome;
-    int idade ;
+    private String nome;
+    private int idade ;
 
     public Pessoa(String nome, int idade) {
         this.nome = nome;

@@ -3,15 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.unp.aed.entidade;
+package aulaPOO;
 
 /**
  *
  * @author aqbs
  */
-public class Funcionario {
+public class Funcionario extends Pessoa {
 
     private float salario;
+
+    public Funcionario(float salario, String nome, int idade) {
+        super(nome, idade);
+        this.salario = salario;
+    }
 
     public float getSalario() {
         return salario;

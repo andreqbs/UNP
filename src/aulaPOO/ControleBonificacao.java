@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.unp.aed.entidade;
+package aulaPOO;
 
 /**
  *
@@ -25,13 +25,11 @@ public class ControleBonificacao {
         
         ControleBonificacao controle = new ControleBonificacao();
         
-        //Funcionario funcionario1 = new Funcionario("Kleber", 22);
-        //funcionario1.setSalario(1000);
-        //controle.registra(funcionario1);
+        Funcionario funcionario1 = new Funcionario(1000, "Paulo", 24);
+        controle.registra(funcionario1);
 
-       // Gerente funcionario2 = new Gerente("Andre", 23);
-        //funcionario1.setSalario(5000);
-        //controle.registra(funcionario2);
+        Gerente funcionario2 = new Gerente(10, 5000, "Andre", 27);
+        controle.registra(funcionario2);
         
         System.out.println(controle.getTotal());
     }

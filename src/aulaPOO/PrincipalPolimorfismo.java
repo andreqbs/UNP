@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.unp.aed.entidade;
+package aulaPOO;
 
 /**
  *
@@ -12,9 +12,8 @@ package br.com.unp.aed.entidade;
 public class PrincipalPolimorfismo {
     
     public static void main(String[] args) {
-        //Gerente gerente = new Gerente("Andre", 24);
-        //gerente.setSalario(1000);
-        //System.out.println(gerente.getBonificacao()); 
+        Gerente gerente = new Gerente(10, 1000, "Andre", 24);
+        System.out.println(gerente.getBonificacao()); 
     } 
 }
     
