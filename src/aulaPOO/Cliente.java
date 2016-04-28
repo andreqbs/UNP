@@ -9,9 +9,17 @@ package aulaPOO;
  *
  * @author aqbs
  */
-public class Cliente {
+public class Cliente extends Pessoa {
     
     private String funcao;
+
+    public Cliente(String funcao, String nome, int idade) {
+        super(nome, idade);
+        this.funcao = funcao;
+    }
+
+    
+    
 
     public String getFuncao() {
         return funcao;
