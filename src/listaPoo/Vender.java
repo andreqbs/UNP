@@ -5,6 +5,9 @@
  */
 package listaPoo;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aqbs
@@ -176,6 +179,7 @@ public class Vender extends javax.swing.JDialog {
     private void btnComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprarActionPerformed
         if (auto != null) {
             Controlador.geral.venda(auto);
+            JOptionPane.showMessageDialog(new JFrame(), "Venda feita com sucesso", "Venda", JOptionPane.INFORMATION_MESSAGE);
             lstAuto.setModel(Controlador.geral.listar());
         }
     }//GEN-LAST:event_btnComprarActionPerformed

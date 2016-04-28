@@ -14,7 +14,6 @@ import javax.swing.JOptionPane;
  */
 public class Compras extends javax.swing.JDialog {
 
-    
     public Compras(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -135,9 +134,9 @@ public class Compras extends javax.swing.JDialog {
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void btnComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprarActionPerformed
-       Automovel x = new Automovel(Integer.parseInt(txfId.getText()), txfMarca.getText(), txfModelo.getText(), Integer.parseInt(txfAno.getText()), Float.parseFloat(txfValor.getText()));
-       Controlador.geral.compra(x);
-       JOptionPane.showMessageDialog(new JFrame(), "Compra feita com sucesso", "Compra", JOptionPane.ERROR_MESSAGE);
+        Automovel x = new Automovel(Integer.parseInt(txfId.getText()), txfMarca.getText(), txfModelo.getText(), Integer.parseInt(txfAno.getText()), Float.parseFloat(txfValor.getText()));
+        Controlador.geral.compra(x);
+        JOptionPane.showMessageDialog(new JFrame(), "Compra feita com sucesso", "Compra", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnComprarActionPerformed
 
 
