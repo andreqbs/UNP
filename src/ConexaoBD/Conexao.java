@@ -18,7 +18,7 @@ import java.sql.SQLException;
  */
 public class Conexao {
 
-    private static Connection connection = null;
+    private static Connection connection = null;//a
 
     /*
     Conexão com o banco de dados

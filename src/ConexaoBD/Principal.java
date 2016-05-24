@@ -106,7 +106,7 @@ public class Principal extends javax.swing.JFrame {
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
         Usuario u = new Usuario(txfUsuario.getText(), txfSenha.getText());
         UsuarioDao d = new UsuarioDao();
-        d.inserir(u);
+        d.inserir(u);//a
     }//GEN-LAST:event_btnInserirActionPerformed
 
     /**

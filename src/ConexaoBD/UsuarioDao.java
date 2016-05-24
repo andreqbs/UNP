@@ -27,7 +27,7 @@ public class UsuarioDao {
         con = Conexao.getConexao();
 
         // cria um preparedStatement
-        String sql = "select * from usuario";
+        String sql = "select * from usuario" ;//aa
         PreparedStatement stmt;
         try {
             stmt = con.prepareStatement(sql);
