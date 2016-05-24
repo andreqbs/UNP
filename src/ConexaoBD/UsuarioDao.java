@@ -33,7 +33,8 @@ public class UsuarioDao {
             stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                System.out.println("Conectado");
+                String nome = rs.getString("NOME");
+                System.out.println("Conectado" + nome);
             } else {
                 System.out.println("Usuário não cadastrado");
             }
@@ -41,7 +42,7 @@ public class UsuarioDao {
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDao.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //executa o comando e guarda os dados em rs
+ 
 
     }
     
