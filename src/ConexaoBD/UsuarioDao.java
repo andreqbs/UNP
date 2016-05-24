@@ -44,5 +44,25 @@ public class UsuarioDao {
         //executa o comando e guarda os dados em rs
 
     }
+    
+    public void inserir(Usuario u) {
+        con = Conexao.getConexao();
+
+        // cria um preparedStatement
+        String sql = "insert into usuario (usuario, senha) VALUES(?,?)";
+        PreparedStatement stmt;
+        try {
+            stmt = con.prepareStatement(sql);
+            stmt.setString(1, u.getUsuario());
+            stmt.setString(2, u.getSenha());
+            stmt.executeUpdate();
+                   
+            stmt.close();
+            System.out.println("Inserido com sucesso");
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioDao.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Erro na conexao");
+        }
+    }
 
 }

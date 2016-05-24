@@ -32,18 +32,18 @@ public class Conexao {
             Class.forName(driverName); // Configurando a nossa conexão com um banco de dados//
 
             //String servidor = "localhost";    //caminho do servidor do BD
-            String servidor = "AQBS\\SQLEXPRESS";    //caminho do servidor do BD
+            String servidor = "ANDRE";    //caminho do servidor do BD
 
             String porta = "1433";
 
-            String bancoDados = "aulaSelect";        //nome do seu banco de dados
+            String bancoDados = "AulaQuinta";        //nome do seu banco de dados
 
             //String url = "jdbc:mysql://" + servidor + "/" + bancoDados;
             String url = "jdbc:jtds:sqlserver://" + servidor + ":" + porta + "/" + bancoDados + ";instance=SQLEXPRESS"; //Para SQL Server 
 
-            String usuario = "sa";        //nome de um usuário de seu BD      
+            String usuario = "andre";        //nome de um usuário de seu BD      
 
-            String senha = "aqbs1902";      //sua senha de acesso
+            String senha = "12345";      //sua senha de acesso
 
             connection = DriverManager.getConnection(url, usuario, senha);
 

@@ -33,7 +33,7 @@ public class Principal extends javax.swing.JFrame {
         txfUsuario = new javax.swing.JTextField();
         txfSenha = new javax.swing.JTextField();
         btnConectar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnInserir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,7 +48,12 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Cancelar");
+        btnInserir.setText("Inserir");
+        btnInserir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInserirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,8 +74,8 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addComponent(btnConectar)
                         .addGap(46, 46, 46)
-                        .addComponent(jButton2)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                        .addComponent(btnInserir)))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,7 +91,7 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnConectar)
-                    .addComponent(jButton2))
+                    .addComponent(btnInserir))
                 .addGap(24, 24, 24))
         );
 
@@ -94,9 +99,15 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConectarActionPerformed
-        UsuarioDao u = new UsuarioDao();
+ UsuarioDao u = new UsuarioDao();
         u.autenticar(txfUsuario.getText(), txfSenha.getText());
     }//GEN-LAST:event_btnConectarActionPerformed
+
+    private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
+        Usuario u = new Usuario(txfUsuario.getText(), txfSenha.getText());
+        UsuarioDao d = new UsuarioDao();
+        d.inserir(u);
+    }//GEN-LAST:event_btnInserirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,7 +146,7 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConectar;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnInserir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField txfSenha;
